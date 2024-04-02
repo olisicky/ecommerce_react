@@ -31,7 +31,6 @@ const NavItem = ( items: Items, active ) => {
     <li className="list-none text-gray-900 mx-6 dark:text-white">
       {items.submenu ? (
         <>
-          {console.log(items.submenu)}
           <button 
               type="button"
               onClick={() => setDropdown((prev) => !prev)}

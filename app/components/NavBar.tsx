@@ -2,24 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
+import Data from "../assets/Data";
 
-const MENU_LIST = [
-  { text: "Men", href: "/men" },
-  { text: "Women", href: "/women" },
-  { 
-    text: "About Us",
-    href: "/about", 
-    submenu: [
-      {
-        text: "Contact",
-        href: "/about/#Contact"
-      },
-      {
-        text: "Blog",
-        href: "/about/#Blog"
-      }
-  ]},
-];
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
@@ -35,7 +19,7 @@ const Navbar = () => {
         </div>
 
         <div className={`${navActive ? "active" : ""} items-center pb-5 justify-center hidden w-10 md:flex md:w-auto md:order-1 text-3xl`}>
-            {MENU_LIST.map((menu, idx) => (
+            {Data.MENU_LIST.map((menu, idx) => (
             <div
                 onClick={() => {
                   setActiveIdx(idx);

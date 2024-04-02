@@ -1,9 +1,21 @@
 import React from 'react'
+import Pagination from '../components/Pagination'
+import Data from "../assets/Data";
 
-const UsersPage = () => {
+type Params = {
+  searchParams: {[key: string]: string | string[] | undefined},
+}
+
+const Men = ({ searchParams }: Params) => {
+
   return (
-    <div>men</div>
+    <div>
+        <div className="p-10">
+          <p className="text-5xl" id="products:/men">Pro muže</p>
+        </div>
+        <Pagination searchParams={searchParams} data={Data.PRODUCTS} n_items={8}/>
+    </div>
   )
 }
 
-export default UsersPage
+export default Men

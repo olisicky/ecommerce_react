@@ -214,3 +214,7 @@ function greet(name: string | null | undefined) {
     ...
 }
 ```
+
+### Pagination
+* https://www.youtube.com/watch?v=SXmni_7B0r4
+    * pěkná ukázka, vyzkoušet!
